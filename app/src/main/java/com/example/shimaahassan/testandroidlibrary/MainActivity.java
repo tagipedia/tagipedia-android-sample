@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
-            HashMap data = (HashMap) bundle.getSerializable("topic");
-            TUtils.showAdDialog(this,data);
+            HashMap topic = (HashMap) bundle.getSerializable("topic");
+            TUtils.showAdDialog(this,topic);
         }
 
         TUtils.showBluetoothDialog(this, "HELLLO" , "WORLD");
