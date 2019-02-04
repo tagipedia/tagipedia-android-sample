@@ -18,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if(bundle != null) {
             HashMap topic = (HashMap) bundle.getSerializable("topic");
-            TUtils.showAdDialog(this,topic);
+            if(topic != null) {
+                TUtils.showAdDialog(this,topic);
+            }
         }
 
         TUtils.showBluetoothDialog(this, "HELLLO" , "WORLD");
