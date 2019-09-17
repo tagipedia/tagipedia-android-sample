@@ -73,7 +73,7 @@ public class MyAppContext extends MultiDexApplication {
         //to register user with interests
         //this will show ads based on matching between ad interests and user interests otherwise it will show ads that was created without interests
         //String[] interests;
-        TBuilder.identifyUser("USER_NAME", interests);
+//        TBuilder.identifyUser("USER_NAME", interests);
     }
 
     public String loadJSONFromAsset(Context context) {
