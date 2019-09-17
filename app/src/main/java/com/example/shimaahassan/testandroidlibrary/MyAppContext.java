@@ -1,11 +1,20 @@
 package com.example.shimaahassan.testandroidlibrary;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.multidex.MultiDexApplication;
 
 import com.tagipedia.Callback;
 import com.tagipedia.TBuilder;
+import com.tagipedia.contracts.TRegion;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 /**
  * Created by tagipedia on 2/20/18.
@@ -40,11 +49,54 @@ public class MyAppContext extends MultiDexApplication {
                 // }}
             }
         };
+        JSONObject obj = null;
+        ArrayList<TRegion> regions = new ArrayList<TRegion>();
+        try {
+            obj = new JSONObject(loadJSONFromAsset(getApplicationContext()));
+            JSONArray arr = obj.getJSONArray("regions");
+            for (int i = 0; i < arr.length(); i++)
+            {
+                String UUID = arr.getJSONObject(i).getString("UUID");
+                String major = arr.getJSONObject(i).getString("major");
+                String minor = arr.getJSONObject(i).getString("minor");
+                regions.add(new TRegion(UUID, major, minor));
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if(regions.size() > 0){
+            tBuilder.setRegions(regions);
+        }
         tBuilder.setMapButtonPressedListener(onMapButtonPressedListener);
         tBuilder.build();
         //to register user with interests
         //this will show ads based on matching between ad interests and user interests otherwise it will show ads that was created without interests
         //String[] interests;
-        tBuilder.identifyUser("USER_NAME", interests);
+        TBuilder.identifyUser("USER_NAME", interests);
+    }
+
+    public String loadJSONFromAsset(Context context) {
+        String json = null;
+        try {
+            InputStream is = context.getAssets().open("TRegions.json");
+
+            int size = is.available();
+
+            byte[] buffer = new byte[size];
+
+            is.read(buffer);
+
+            is.close();
+
+            json = new String(buffer, "UTF-8");
+
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+
     }
 }
