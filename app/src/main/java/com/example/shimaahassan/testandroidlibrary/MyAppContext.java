@@ -49,6 +49,24 @@ public class MyAppContext extends MultiDexApplication {
                 // }}
             }
         };
+        //to receive when user enter beacon region
+        Callback.OnEnterBeaconRegionListener onEnterBeaconRegion = new Callback.OnEnterBeaconRegionListener(){
+            @Override
+            public void onEnterBeaconRegion(HashMap data) {
+                System.out.print(data);
+            }
+        };
+        tBuilder.setEnterBeaconRegionListener(onEnterBeaconRegion);
+        //to receive when user exit beacon region
+        Callback.OnExitBeaconRegionListener onExitBeaconRegion = new Callback.OnExitBeaconRegionListener(){
+            @Override
+            public void onExitBeaconRegion(HashMap data) {
+                System.out.print(data);
+                //time_spent in milliseconds
+                //enter_date and exit_date in millisecond since 1970
+            }
+        };
+        tBuilder.setExitBeaconRegionListener(onExitBeaconRegion);
         JSONObject obj = null;
         ArrayList<TRegion> regions = new ArrayList<TRegion>();
         try {

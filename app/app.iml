@@ -78,15 +78,24 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-verifier" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-resources" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
@@ -97,8 +106,8 @@
     <orderEntry type="library" exported="" name="Gradle: com.android.support.constraint:constraint-layout-solver:1.0.2@jar" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-idling-resource-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.google.guava:guava:18.0-rc1@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.altbeacon:android-beacon-library-2.16.3" level="project" />
     <orderEntry type="library" exported="" name="Gradle: commons-io:commons-io:2.6@jar" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: org.altbeacon:android-beacon-library-2.16.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-core-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.joanzapata.iconify:android-iconify-fontawesome-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.android.support:multidex-1.0.1" level="project" />
@@ -129,7 +138,7 @@
     <orderEntry type="library" exported="" name="Gradle: com.netflix.rxjava:rxjava-core:0.19.6@jar" level="project" />
     <orderEntry type="library" exported="" name="Gradle: android.arch.core:common:1.0.0@jar" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.android.support:support-annotations:27.1.0@jar" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: com.tagipedia:tagipedia-2.2.1" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.tagipedia:tagipedia-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.android.support:support-compat-26.1.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:2.0.1@jar" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.github.kevinsawicki:http-request:5.4@jar" level="project" />
